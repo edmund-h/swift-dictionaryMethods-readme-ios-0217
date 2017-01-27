@@ -151,3 +151,62 @@ let allTheMoons = Array(planetsAndTheirMoons.values)
 for numberOfMoons in planetsAndTheirMoons.values {
     print(numberOfMoons)
 }
+
+
+var noiseRock = ["Melt-Banana - Charlie",
+                 "Lightning Bolt - Wonderful Rainbow",
+                 "Death From Above 1979- You're a Woman and I'm a Machine",
+                 "Roomrunner - Ideal Cities",
+                 "Sonic Youth - Daydream Nation"
+                ]
+var shoeGaze = ["My Bloody Valentine - Loveless",
+                "Brian Jonestown Massacre - Methadrone",
+                "Ringo Deathstarr - Sparkler",
+                "Curve - Doppelganger",
+                "Slowdive - Souvlaki"
+                ]
+var classicPunk = ["The Damned - Damned, Damned, Damned",
+                   "The Germs - s/t",
+                   "Sex Pistols - Never Mind the Bollocks, Here's the Sex Pistols",
+                   "GBH - City Baby Attacked by Rats",
+                   "The Ramones - Rocket to Russia"
+                ]
+var classicEmo = ["Sunny Day Real Estate - Diary",
+                  "Mineral - The Power of Failing",
+                  "Texas is the Reason - Do You Know Who You Are?",
+                  "The Promise Ring - Nothing Feels Good",
+                  "Braid - Frame & Canvas"
+                ]
+var misspelledPop = [
+                    "Britney Speras - Back Out",
+                    "Lad Gaga - The Phame",
+                    "Just in Timber lake - FutureSix/LoveDonuts",
+                    "Smiley Virus - Bangers",
+                    "Anna Dellray - Pair of Dice"
+                    ]
+
+var genres = [
+            "Pop" : misspelledPop,
+            "Shoegaze" : shoeGaze,
+            "Emo": classicEmo,
+            "Punk": classicPunk
+            ]
+
+
+genres.updateValue(noiseRock, forKey: "Noise Rock")
+
+let albumRecommendations = genres.values
+
+
+for everyAlbum in albumRecommendations {
+    print (everyAlbum)
+}
+
+genres.removeValue(forKey: "Pop")
+
+let genreNames = genres.keys
+
+print ("I listen to a lot of:")
+for everyGenre in genreNames {
+    print (everyGenre)
+}
